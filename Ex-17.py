@@ -7,8 +7,11 @@ for i in range(-n, n+1):
 
 print(spisok)
 
+mltpl = 1
 f = open("file.txt", "r")
 for line in f:
+    mltpl *= spisok[int(line)]
     print(spisok[int(line)], end=" ")
 f.close()
-print()
+print("\n Произведение = ",mltpl)
+
